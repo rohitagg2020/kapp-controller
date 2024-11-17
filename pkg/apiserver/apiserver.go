@@ -231,7 +231,6 @@ func newServerConfig(aggClient aggregatorclient.Interface, opts NewAPIServerOpts
 	}
 
 	serverConfig := genericapiserver.NewRecommendedConfig(Codecs)
-	recommendedOptions.Features.EnablePriorityAndFairness = false
 	if err := recommendedOptions.ApplyTo(serverConfig); err != nil {
 		return nil, err
 	}
